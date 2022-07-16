@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthCare Diabetics</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Website Title -->
+
+  <div class="container">
+    <h2 class='container-heading'><span class="heading_font">HealthCare Diabetics</span></h2>
+    <div class='description'>
+      <p>A Machine Learning Web Application that predicits HealthCare Diabetics, Built with Flask and Deployed in localhost.</p><br>
+        <p>(Note:This model is 99% accurate)</p>
+    </div>
+  </div>
+
+  <!-- Text Area -->
+  <div class="ml-container">
+    <form action="{{ url_for('predict')}}" method="POST"> 
+
+      
+        <label for="Pregnancies">Pregnancies</label>
+        <input type="int" id="Pregnancies" name="Pregnancies" placeholder="enter the value in int "><br>
+
+        <label for="Glucose">Glucose</label>
+        <input type="int" id="Glucose" name="Glucose" placeholder="enter the Glucose in int"><br>
+        
+        <label for="BloodPressure">BloodPressure</label>
+        <input type="int" id="BloodPressure" name="BloodPressure" placeholder="enter the BP value in int "><br>
+
+        <label for="SkinThickness">SkinThickness</label>
+        <input type="int" id="SkinThickness" name="SkinThickness" placeholder="enter the value in int"><br>
+
+        <label for="Insulin">Insulin</label>
+        <input type="int" id="Insulin" name="Insulin" placeholder="enter the Insulin in int "><br>
+
+        <label for="BMI">BMI</label>
+        <input type="float" id="BMI" name="BMI" placeholder="enter the value in float "><br>
+	
+        
+        <label for="DiabetesPedigreeFunction">DiabetesPedigreeFunction</label>
+        <input type="float" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" placeholder="enter the value in float "><br>
+
+        <label for="Age">Age</label>
+        <input type="int" id="Age" name="Age" placeholder="enter the Age in int"><br>
+  
+  
+      <input type="submit" class="my-cta-button" value="Predict">
+    </form>
+  </div>
+
+</body>
+
+</html>

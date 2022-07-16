@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>HealthCare Diabetics</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	</head>
+
+    <body>
+
+        <!-- Website Title -->
+		<div class="container">
+            <h2 class='container-heading'><span class="heading_font">HealthCare Diabetics</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask.</p>
+    		</div>
+    	</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if data==1 %}
+				<h1>Prediction: <span class='Diabetic'>Oops! u r in risk.</span></h1>
+				
+			{% elif data==0 %}
+				<h1>Prediction: <span class='Non-Diabetic'>safe.</span></h1>
+				
+			{% endif %}
+		</div>
+
+		<!-- Footer -->
+        
+           <p class='footer-description'>Made by Gundala Manish.</p>
+       </div>
+
+	</body>
+</html>
